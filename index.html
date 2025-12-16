@@ -6,234 +6,191 @@
   <title>Eşref Saati - Hesap Silme Politikası</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* --- GENEL AYARLAR (Eşref Saati Design System) --- */
-    * {
-      box-sizing: border-box;
+    /* --- TEMEL AYARLAR (SİYAH TEMA) --- */
+    body {
+      background-color: #000000; /* Tam Siyah Zemin */
+      color: #e0e0e0; /* Kırık Beyaz Metin */
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    body {
-      background-color: #000000; /* Tam Siyah */
-      color: #FFFFFF; /* Beyaz Metin */
       line-height: 1.6;
-      padding-bottom: 40px;
     }
 
-    a {
-      text-decoration: none;
-      color: #f90606;
-      font-weight: bold;
-    }
-
-    /* --- HEADER --- */
-    header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(to bottom, #000000 0%, #111111 100%);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #f90606; /* Ana Kırmızı */
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px rgba(249, 6, 6, 0.6); /* Glow Efekti */
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #cccccc;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* --- ANA KONTEYNER --- */
     .container {
       max-width: 900px;
       margin: 0 auto;
-      background-color: #1a1a1a; /* Koyu Gri Zemin */
-      border: 1px solid #f90606; /* İnce Kırmızı Çerçeve */
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0 0 20px rgba(249, 6, 6, 0.1);
+      padding: 20px;
     }
 
-    /* --- TİPOGRAFİ & BAŞLIKLAR --- */
+    /* --- HEADER (BAŞLIK ALANI) --- */
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      border-bottom: 2px solid #f90606; /* Kırmızı Çizgi */
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #f90606; /* Neon Kırmızı */
+      margin: 0 0 10px 0;
+      text-transform: uppercase; /* Hepsi Büyük Harf */
+      /* NEON PARLAMA EFEKTİ (GLOW) */
+      text-shadow: 0 0 10px #f90606, 0 0 20px #f90606;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    /* --- BÖLÜM BAŞLIKLARI --- */
     h2 {
+      font-size: 1.5rem;
       color: #f90606;
-      font-size: 1.8rem;
-      margin-top: 30px;
+      margin-top: 40px;
       margin-bottom: 15px;
-      border-bottom: 1px solid #333;
+      text-transform: uppercase;
+      border-bottom: 1px solid #333; /* Altına ince gri çizgi */
       padding-bottom: 10px;
-      text-shadow: 0 0 5px rgba(249, 6, 6, 0.4);
+      /* HAFİF GLOW */
+      text-shadow: 0 0 8px rgba(249, 6, 6, 0.8);
     }
 
     h3 {
-      color: #ff4d4d; /* Alt başlıklar biraz daha açık kırmızı */
-      font-size: 1.3rem;
+      font-size: 1.1rem;
+      color: #ffffff;
       margin-top: 25px;
-      margin-bottom: 10px;
+      font-weight: bold;
     }
 
+    /* --- METİNLER VE LİSTELER --- */
     p {
       margin-bottom: 15px;
-      color: #e0e0e0;
+      color: #cccccc;
     }
 
-    /* --- BADGE (Etiket) --- */
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      background-color: rgba(249, 6, 6, 0.1);
-      color: #f90606;
-      border: 1px solid #f90606;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    /* --- LİSTELER --- */
     ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
+      list-style: none; /* Standart maddeyi kaldır */
+      padding-left: 0;
     }
 
     ul li {
-      margin-bottom: 8px;
-      color: #e0e0e0;
-      list-style-type: none; 
       position: relative;
       padding-left: 20px;
+      margin-bottom: 10px;
+      color: #cccccc;
     }
 
+    /* Madde işaretlerini nokta yap */
     ul li::before {
       content: "•";
-      color: #f90606;
-      font-weight: bold;
-      font-size: 1.2rem;
+      color: #f90606; /* Kırmızı Nokta */
       position: absolute;
       left: 0;
-      top: -2px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    /* --- İLETİŞİM KUTUSU --- */
+    .contact-box {
+      background-color: #111;
+      border: 1px solid #333;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #f90606;
+      text-decoration: none;
     }
 
     /* --- FOOTER --- */
     footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #666;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-      margin-top: 40px;
+      padding: 40px 0;
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 50px;
+      border-top: 1px solid #222;
     }
 
-    /* --- RESPONSIVE --- */
-    @media(max-width: 600px){
-      header h1 { font-size: 2rem; }
-      .container { padding: 20px; border-width: 0; background: transparent; }
-      h2 { font-size: 1.5rem; }
+    /* --- MOBİL UYUM --- */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Eşref Saati – Hesap Silme Politikası</h1>
-    <p>Kullanıcı verilerinin güvenliği ve şeffaflık için hazırlanmıştır.</p>
+    <h1>EŞREF SAATİ<br>HESAP SİLME POLİTİKASI</h1>
+    <div class="subtitle">Son Güncelleme: 16.12.2025</div>
   </header>
 
   <div class="container">
 
-    <span class="badge">Güncel</span>
-    <p><strong>Geliştirici:</strong> Ömer Eyibardakçı<br>
-       <strong>İletişim:</strong> esrefsaatiapp@gmail.com</p>
+    <div class="contact-box">
+      <strong>Geliştirici:</strong> Ömer Eyibardakçı<br>
+      <strong>İletişim:</strong> <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a>
+    </div>
 
-    <h2>1. Hesap Silme Kalıcıdır</h2>
+    <h2>1. HESAP SİLME KALICIDIR</h2>
     <p>Hesap silme işlemi geri alınamaz. İşlem tamamlandıktan sonra tüm verileriniz kalıcı olarak silinir ve tekrar kurtarılamaz. Uygulamayı kullanmaya devam etmek için yeni bir hesap oluşturmanız gerekir.</p>
 
-    <h2>2. Silinen Veriler</h2>
+    <h2>2. SİLİNEN VERİLER</h2>
     <p>Hesap silme işleminde aşağıdaki bilgiler tamamen kaldırılır:</p>
 
-    <h3>• Profil Bilgileri</h3>
+    <h3>Profil Bilgileri</h3>
     <ul>
       <li>Ad ve soyad</li>
       <li>E-posta adresi</li>
-      <li>Yaş, cinsiyet</li>
-      <li>Burç ve yükselen</li>
+      <li>Yaş, cinsiyet, burç ve yükselen bilgileri</li>
       <li>Doğum zamanı ve ilişki durumu</li>
     </ul>
 
-    <h3>• Eşref Saati / Geri Sayım Verileri</h3>
+    <h3>Eşref Saati / Geri Sayım Verileri</h3>
     <ul>
-      <li>Aktif geri sayım</li>
+      <li>Aktif geri sayım sayaçları</li>
       <li>Enerji & dua zamanı hesaplamaları</li>
-      <li>Kullanıcıya özel zaman verileri</li>
+      <li>Kullanıcıya özel oluşturulmuş zaman verileri</li>
     </ul>
 
-    <h3>• Bildirimler</h3>
-    <ul>
-      <li>Tüm planlanmış geri sayım bildirimleri</li>
-      <li>Cihazdaki planlanmış görevler iptal edilir</li>
-    </ul>
-
-    <h3>• Giriş Bilgileri</h3>
+    <h3>Giriş Bilgileri</h3>
     <p>Hesabınız uygulamanın kimlik sisteminden tamamen kaldırılır. Silinen e‑posta ile tekrar giriş yapılamaz.</p>
 
-    <h2>3. Güvenlik Aşamaları</h2>
+    <h2>3. GÜVENLİK AŞAMALARI</h2>
     <p>Hesabın istem dışı silinmesini engellemek için çok adımlı bir doğrulama süreci uygulanır:</p>
     <ul>
-      <li><strong>Birinci onay penceresi:</strong> Kullanıcı isterse işlemi iptal edebilir.</li>
-      <li><strong>Şifre doğrulama:</strong> Hesabın sahibi olduğunuzu kanıtlamak için şifre istenir.</li>
-      <li><strong>Son aşama:</strong> Doğrulama başarılı olursa silme işlemi başlatılır.</li>
+      <li><strong>Birinci Onay:</strong> Kullanıcı isterse işlemi iptal edebilir.</li>
+      <li><strong>Şifre Doğrulama:</strong> Hesabın sahibi olduğunuzu kanıtlamak için şifre istenir.</li>
+      <li><strong>Son Aşama:</strong> Doğrulama başarılı olursa silme işlemi başlar.</li>
     </ul>
 
-    <h2>4. Hesap Silme Adımları</h2>
-    <h3>Adım 1: Ayarlara Girin</h3>
-    <p>Uygulama içinde Ayarlar bölümüne gidin ve sayfanın altındaki <em>Hesabı Sil</em> seçeneğine dokunun.</p>
+    <h2>4. HESAP SİLME ADIMLARI</h2>
+    <p><strong>Adım 1:</strong> Uygulama içinde <em>Ayarlar</em> bölümüne gidin ve <em>Hesabı Sil</em> seçeneğine dokunun.</p>
+    <p><strong>Adım 2:</strong> Açılan uyarı penceresini onaylayın.</p>
+    <p><strong>Adım 3:</strong> Güvenlik amacıyla şifrenizi girin.</p>
+    <p><strong>Adım 4:</strong> İşlem tamamlanır ve uygulamadan çıkış yapılır.</p>
 
-    <h3>Adım 2: İlk Onay</h3>
-    <p>Geri alınamaz bir işlem olduğu belirtilen uyarı penceresi açılır. Onaylamazsanız işlem durur.</p>
+    <h2>5. SIKÇA SORULAN SORULAR</h2>
+    <p><strong>Hesabımı sildikten sonra geri alabilir miyim?</strong><br>
+    Hayır. Silme işlemi kalıcıdır.</p>
 
-    <h3>Adım 3: Şifre Doğrulama</h3>
-    <p>Güvenlik amacıyla şifreniz tekrar istenir. Yanlış şifre girilirse işlem devam etmez.</p>
+    <p><strong>Şifremi unuttum, nasıl sileceğim?</strong><br>
+    Önce "Şifremi Unuttum" ile şifrenizi sıfırlayıp ardından silme işlemi yapabilirsiniz.</p>
 
-    <h3>Adım 4: Silme Tamamlanır</h3>
-    <p>Doğru şifre sonrası verileriniz kaldırılır ve uygulamadan otomatik olarak çıkış yapılır.</p>
-
-    <h2>5. Silme İşlemi Başarısız Olursa</h2>
-    <p>İnternet bağlantısı, geçersiz şifre veya geçici sistem problemleri sebebiyle işlem iptal olabilir. Bu durumda hiçbir veriniz silinmez. Sorun devam ederse destek ile iletişime geçebilirsiniz.</p>
-
-    <h2>6. Silme Öncesi Bilmeniz Gerekenler</h2>
-    <ul>
-      <li>Silinen geri sayım verileri geri getirilemez.</li>
-      <li>Hesap silindikten sonra kurtarma mümkün değildir.</li>
-      <li>Gerek duyarsanız verilerinizi silmeden önce ekran görüntüsü olarak saklayabilirsiniz.</li>
-      <li>Sadece çıkış yapmak istiyorsanız Ayarlar bölümünden çıkış seçeneğini kullanabilirsiniz.</li>
-    </ul>
-
-    <h2>7. Gizlilik ve Veri Koruma</h2>
-    <p>Hesap silme, veri güvenliği ilkelerine tamamen uygun şekilde çalışır. Silinen bilgiler kullanıcı isteği doğrultusunda kalıcı olarak kaldırılır ve kimse tarafından erişilemez.</p>
-
-    <h2>8. Sıkça Sorulan Sorular</h2>
-    <h3>• Hesabımı sildikten sonra geri alabilir miyim?</h3>
-    <p>Hayır. Silme işlemi kalıcıdır.</p>
-
-    <h3>• Şifremi unuttum, nasıl sileceğim?</h3>
-    <p>Önce "Şifremi Unuttum" ile şifrenizi sıfırlayıp ardından silme işlemi yapabilirsiniz.</p>
-
-    <h3>• Başka bir cihazdan silebilir miyim?</h3>
-    <p>Evet. Şifrenizi biliyorsanız her cihazdan silebilirsiniz.</p>
+    <p><strong>Başka bir cihazdan silebilir miyim?</strong><br>
+    Evet. Şifrenizi biliyorsanız her cihazdan silebilirsiniz.</p>
 
   </div>
 
   <footer>
-    © 2025 Eşref Saati — Tüm Hakları Saklıdır
+    &copy; 2025 Eşref Saati. Tüm hakları saklıdır.
   </footer>
 
 </body>

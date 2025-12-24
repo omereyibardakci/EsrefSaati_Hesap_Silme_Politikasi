@@ -161,60 +161,60 @@
 
       <div class="dev-box">
         <strong>Geliştirici:</strong> Ömer Eyibardakçı<br>
-        <strong>İletişim:</strong> <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a>
+        <strong>İletişicm:</strong> <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a>
       </div>
 
       <h2>1. HESAP SİLME KALICIDIR</h2>
-      <p>Hesap silme işlemi <strong>geri alınamaz</strong>. İşlem tamamlandıktan sonra tüm verileriniz kalıcı olarak silinir ve tekrar kurtarılamaz. Uygulamayı kullanmaya devam etmek için yeni bir hesap oluşturmanız gerekir.</p>
+      <p>Hesap silme işlemi <strong>geri alınamaz</strong>. İşlem tamamlandıktan sonra tüm verileriniz sunucularımızdan kalıcı olarak silinir ve tekrar kurtarılamaz. Uygulama verimliliğinden faydalanmaya devam etmek için yeni bir hesap oluşturmanız gerekir.</p>
 
       <h2>2. SİLİNEN VERİLER</h2>
-      <p>Hesap silme işleminde aşağıdaki bilgiler sunucularımızdan tamamen kaldırılır:</p>
+      <p>Hesap silme işleminde aşağıdaki bilgiler altyapımızdan tamamen kaldırılır:</p>
 
-      <h3>Profil Bilgileri</h3>
+      <h3>Profil ve Kullanıcı Bilgileri</h3>
       <ul>
         <li>Ad ve soyad</li>
         <li>E-posta adresi</li>
-        <li>Yaş, cinsiyet, burç ve yükselen bilgileri</li>
-        <li>Doğum zamanı ve ilişki durumu</li>
+        <li>Yaş ve cinsiyet bilgileri</li>
+        <li>Profil özelleştirme tercihleri</li>
       </ul>
 
-      <h3>Eşref Saati / Geri Sayım Verileri</h3>
+      <h3>Analiz ve Zamanlama Verileri</h3>
       <ul>
-        <li>Aktif geri sayım sayaçları</li>
-        <li>Enerji & dua zamanı hesaplamaları</li>
-        <li>Kullanıcıya özel oluşturulmuş zaman verileri</li>
+        <li>Aktif zamanlayıcılar ve bildirim ayarları</li>
+        <li>Geleneksel zamanlama hesaplama çıktıları</li>
+        <li>Kullanıcıya özel oluşturulmuş tüm uygulama verileri</li>
       </ul>
 
-      <h3>Giriş Bilgileri</h3>
-      <p>Hesabınız uygulamanın kimlik sisteminden (Auth) tamamen kaldırılır. Silinen e‑posta ile tekrar giriş yapılamaz.</p>
+      <h3>Kimlik Doğrulama Bilgileri</h3>
+      <p>Hesabınız uygulamanın güvenli giriş sisteminden tamamen kaldırılır. Silinen hesapla ilişkili veriler hiçbir şekilde üçüncü taraflarla paylaşılmaz veya saklanmaz.</p>
 
       <h2>3. GÜVENLİK AŞAMALARI</h2>
-      <p>Hesabın yanlışlıkla silinmesini engellemek için çok adımlı bir doğrulama süreci uygulanır:</p>
+      <p>Veri güvenliğinizi korumak amacıyla hesap silme süreci şu adımlardan oluşur:</p>
       <ul>
-        <li><strong>Birinci Onay:</strong> Kullanıcı isterse işlemi iptal edebilir.</li>
-        <li><strong>Şifre Doğrulama:</strong> Hesabın sahibi olduğunuzu kanıtlamak için mevcut şifre istenir.</li>
-        <li><strong>Son Aşama:</strong> Doğrulama başarılı olursa silme işlemi başlatılır.</li>
+        <li><strong>Onay Mekanizması:</strong> Yanlışlıkla silmeleri önlemek için kullanıcıdan kesin onay alınır.</li>
+        <li><strong>Şifre Doğrulama:</strong> Hesabın asıl sahibi olduğunuzu doğrulamak için şifre veya kimlik doğrulama adımı istenir.</li>
+        <li><strong>Kalıcı Kaldırma:</strong> Doğrulama sonrası veriler Firebase altyapısından 30 gün içinde tamamen temizlenir.</li>
       </ul>
 
       <h2>4. HESAP SİLME ADIMLARI</h2>
-      <p>Hesabınızı silmek için aşağıdaki adımları izleyebilirsiniz:</p>
+      <p>Hesabınızı uygulama içinden şu şekilde silebilirsiniz:</p>
       <ul>
-        <li><strong>Adım 1:</strong> Uygulama içinde <em>Ayarlar</em> bölümüne gidin ve en alttaki <em>Hesabı Sil</em> seçeneğine dokunun.</li>
-        <li><strong>Adım 2:</strong> Açılan uyarı penceresini okuyup onaylayın.</li>
-        <li><strong>Adım 3:</strong> Güvenlik amacıyla şifrenizi girin.</li>
-        <li><strong>Adım 4:</strong> İşlem tamamlanır ve uygulamadan otomatik olarak çıkış yapılır.</li>
+        <li><strong>Adım 1:</strong> Uygulama menüsünden <em>Ayarlar</em> sekmesine gidin.</li>
+        <li><strong>Adım 2:</strong> <em>Hesabı Yönet</em> başlığı altındaki <em>Hesabı Sil</em> butonuna dokunun.</li>
+        <li><strong>Adım 3:</strong> Ekranda beliren bilgilendirme metnini onaylayın.</li>
+        <li><strong>Adım 4:</strong> Güvenlik doğrulaması sonrası işlem tamamlanır ve sistemden çıkış yapılır.</li>
       </ul>
 
       <h2>5. SIKÇA SORULAN SORULAR</h2>
       
-      <h3>Hesabımı sildikten sonra geri alabilir miyim?</h3>
-      <p>Hayır. Silme işlemi kalıcıdır ve veriler kurtarılamaz.</p>
+      <h3>Hesabımı sildikten sonra tekrar aynı e-posta ile kayıt olabilir miyim?</h3>
+      <p>Evet, ancak eski verileriniz silindiği için uygulamayı yeni bir kullanıcı gibi kullanmaya başlarsınız.</p>
 
-      <h3>Şifremi unuttum, nasıl sileceğim?</h3>
-      <p>Önce giriş ekranındaki "Şifremi Unuttum" bağlantısı ile şifrenizi sıfırlayıp, yeni şifrenizle giriş yaptıktan sonra silme işlemi yapabilirsiniz.</p>
+      <h3>Şifremi unuttum, hesabımı nasıl silebilirim?</h3>
+      <p>Giriş ekranındaki "Şifremi Sıfırla" seçeneği ile yeni bir şifre oluşturup giriş yaptıktan sonra yukarıdaki adımları izleyebilirsiniz.</p>
 
-      <h3>Başka bir cihazdan silebilir miyim?</h3>
-      <p>Evet. Şifrenizi biliyorsanız uygulamaya giriş yaptığınız her cihazdan hesabınızı silebilirsiniz.</p>
+      <h3>Verilerimin hemen silinmesini istiyorum.</h3>
+      <p>Hesap silme butonuna bastığınız anda verileriniz kullanıcı arayüzünden kaldırılır ve sistem silme kuyruğuna alınarak yasal süreler içerisinde tamamen yok edilir.</p>
 
     </main>
 
